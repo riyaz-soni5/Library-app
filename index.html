@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="book-self">
+      <div class="book">
+        <h4 class="book-details">Book Title</h4>
+        <h5 class="book-details">By Author</h5>
+        <h6 class="book-details">Pages</h6>
+        <div class="book-details">
+          <button class="readButton">Read</button>
+          <button class="deleteButton">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <center><button id="showModal">Add a Book</button></center>
+    <dialog>
+      <button
+        style="top: 0px; right: 0px; position: absolute"
+        id="closeModal"
+        onclick="closeModal()"
+      >
+        X
+      </button>
+      <form action="#" style="margin: 5px" onsubmit="addBook()">
+        <label for="Book-title">Title</label>
+        <input type="text" name="Book-title" id="Book-title" />
+        <label for="Author">Author</label>
+        <input type="text" name="Author" id="Author" />
+        <label for="Pages">Number of pages</label>
+        <input type="number" name="Pages" id="Pages" />
+        <button type="submit">Add Book</button>
+      </form>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
